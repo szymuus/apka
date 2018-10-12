@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onLoadNewLesson()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+
+    </ion-buttons>
+    <ion-title>Twój Plan</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding ng-controller="getLessons()">
+  
+    <ion-list>
+      <ion-item *ngFor="let lesson of lessons" >Przedmiot: {{ lesson.przedmiot }} <br>
+      Sala: {{lesson.sala}} <br>
+      Czas trwania: {{lesson.lekcjaStart}} - {{lesson.lekcjaKoniec}}
+      </ion-item>
+      
+
+    </ion-list>
+    
+  
+</ion-content>
