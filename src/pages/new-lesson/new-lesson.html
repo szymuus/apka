@@ -15,7 +15,19 @@
 
 <ion-content padding>
 <form (ngSubmit) ="onAddLesson(f.value)" #f="ngForm">
+
     <ion-item>
+        <ion-label>Dzień</ion-label>
+        <ion-select>
+          <ion-option value="p">Poniedziałek</ion-option>
+          <ion-option value="w">Wtorek</ion-option>
+          <ion-option value="s">Środa</ion-option>
+          <ion-option value="c">Czwartek</ion-option>
+          <ion-option value="p">Piątek</ion-option>
+        </ion-select>
+      </ion-item>
+    <ion-item>
+
         <ion-label color="primary" floating>Przedmiot</ion-label>
         <ion-input type="text" name="przedmiot"  ngModel required ></ion-input>
       </ion-item>
@@ -34,6 +46,6 @@
         <ion-label color="primary" floating>Godzina zakończenia</ion-label>
         <ion-input type="time" name="lekcjaKoniec" ngModel required></ion-input>
       </ion-item>
-        <button ion-button block type="submit" [disabled]="!f.valid" ng-click="onAddLesson()">Dodaj</button>
+        <button ion-button block type="submit" [disabled]="!f.valid" ng-click="onAddLessonP()">Dodaj</button>
 </form>
 </ion-content>

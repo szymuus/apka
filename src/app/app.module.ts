@@ -11,6 +11,8 @@ import { PogodaPage } from '../pages/pogoda/pogoda';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NewLessonPage } from '../pages/new-lesson/new-lesson';
+import { PhonegapLocalNotification } from '@ionic-native/phonegap-local-notification';
+
 
 
 
@@ -44,7 +46,11 @@ import { NewLessonPage } from '../pages/new-lesson/new-lesson';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}, LessonsService
+    PhonegapLocalNotification,
+    
+    
+    
+    {provide: ErrorHandler, useClass: IonicErrorHandler}, LessonsService,PhonegapLocalNotification
   ]
 })
 export class AppModule {}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
 import { LessonsService } from '../../services/lessons.service';
 import {NavController} from 'ionic-angular';
+import { getLocaleTimeFormat } from '@angular/common';
 
 
 
@@ -20,5 +21,6 @@ export class NewLessonPage {
     this.navCtrl.pop();
 
   }
+  
 
 }
